@@ -1,5 +1,5 @@
 Website Content for Skavigo Logistics
-First Section: Carousel
+Section 1a: Carousel
 Carousel 1: Logistics Solutions
 Text:
 “We are committed to delivering your goods safely and on time.”
@@ -17,34 +17,32 @@ Text:
 Button: Get Started
 
 
-Section1: Who we are?
+Section1b: Who we are? #done
 "Skavigo Logistics Pvt Ltd is a pioneering Indian logistics company specializing in comprehensive supply chain solutions. Backed by over a decade of experience through our sibling company, Rajita Clearing Agency Pvt Ltd, we deliver end-to-end logistics services, including customs clearance, freight forwarding, warehousing, and transportation.
-
 At Skavigo, we pride ourselves on our customer-centric approach, cutting-edge technology, and commitment to excellence. Whether you are scaling globally or optimizing local operations, our expertise ensures your goods move safely, efficiently, and on time.
-
 We are more than a logistics provider; we are your trusted partner in building resilient supply chains and driving business growth."
 
 
-Section2: Why to choose us?
-
+Section2: Why to choose us? #done
 4 cards
 Fast and reliable
 Transparent pricing
 Sustainable
 User-Friendly
 
+sectionj : journey
 
-Section 3: Our Mission
+Section 3: Our Mission #done
 Text:
 "At Skavigo Logistics, our mission is to empower businesses with reliable, innovative, and efficient logistics solutions. We strive to simplify supply chain complexities, ensuring safe and timely delivery of goods while fostering long-term partnerships with our clients. Through excellence and sustainability, we aim to make logistics seamless for everyone."
 
-Section 4: Our Vision
+Section 4: Our Vision #done
 Text:
 "Our vision is to become a global leader in logistics and supply chain solutions, redefining industry standards with innovation, integrity, and excellence. We aspire to build a future where logistics fuels growth, connects businesses, and enhances the lives of communities worldwide."
 
 
 
-Section 2: Core Features
+Section 5: Core Features #done
 Inventory Management
 Text:
 “Optimize your inventory with Skavigo’s advanced solutions. We ensure real-time inventory tracking, forecasting, and seamless integration with your supply chain to minimize costs and maximize efficiency.”
@@ -61,7 +59,8 @@ Global Expansion
 Text:
 “Scale internationally with confidence. Skavigo provides end-to-end logistics support to help you expand your reach and navigate the complexities of global trade.”
 
-Section 3: Service Categories
+
+Section 6: Service Categories
 Air Freight
 “Fast and efficient air freight solutions to meet your urgent delivery needs. From small parcels to large cargo, Skavigo ensures timely delivery with global coverage.”
 
@@ -77,7 +76,8 @@ Trucking
 Button Content for Learn More:
 At Skavigo, we offer a comprehensive suite of logistics services designed to fit your business needs. Whether it’s managing time-sensitive air freight, navigating international waters with ocean freight, or providing secure warehousing and trucking, we’ve got the expertise to handle it all. Learn how our tailored solutions can drive efficiency and reliability for your business.
 
-Section 4: Industries We Serve
+
+Section 7: Industries We Serve
 E-Commerce
 “Streamlined logistics for online businesses. From inventory management to last-mile delivery, we ensure seamless operations and happy customers.”
 
