@@ -60,7 +60,7 @@ Text:
 “Scale internationally with confidence. Skavigo provides end-to-end logistics support to help you expand your reach and navigate the complexities of global trade.”
 
 
-Section 6: Service Categories
+Section 6: Service Categories #done
 Air Freight
 “Fast and efficient air freight solutions to meet your urgent delivery needs. From small parcels to large cargo, Skavigo ensures timely delivery with global coverage.”
 
@@ -77,7 +77,7 @@ Button Content for Learn More:
 At Skavigo, we offer a comprehensive suite of logistics services designed to fit your business needs. Whether it’s managing time-sensitive air freight, navigating international waters with ocean freight, or providing secure warehousing and trucking, we’ve got the expertise to handle it all. Learn how our tailored solutions can drive efficiency and reliability for your business.
 
 
-Section 7: Industries We Serve
+Section 7: Industries We Serve #done
 E-Commerce
 “Streamlined logistics for online businesses. From inventory management to last-mile delivery, we ensure seamless operations and happy customers.”
 
