@@ -43,7 +43,7 @@
   font-size: 24px;
   color: white;
   cursor: pointer;
-  z-index: 1100; /* keep above menu */
+  z-index: 1100;
 }
 
 /* -------- Mobile side navbar -------- */
@@ -89,5 +89,11 @@
   /* Show hamburger on mobile */
   .hamburger {
     display: block;
+    position: relative;
+  }
+
+  /* When menu is open, move hamburger beside it */
+  .nav-links.show ~ .hamburger {
+    left: 45%; /* default left */
   }
 }
