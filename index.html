@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
     />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Skavigo</title>
@@ -15,6 +16,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   </head>
   <body class="p-5">
     <div class="relative flex size-full min-h-screen flex-col bg-[#FFFFFF] group/design-root " style='font-family: Inter, "Noto Sans", sans-serif;'>
@@ -25,6 +27,25 @@
           <img src="logo/Skavigo_logo.gif" alt="Skavigo"/>
         </div>
       </div>
+
+      <nav class="navbar">
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Navbar Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Who We Are</a></li>
+          <li><a href="#specialities">Specialities</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#features">Core Features</a></li>
+          <li><a href="#industries">Industries We Serve</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
       <!-- Section 1a -->
       <div id="myCarousel" class="carousel slide" data-ride="carousel" style="overflow-x: initial;">
@@ -143,7 +164,7 @@
       </div>
 
       <!-- Section 1b -->
-      <h2 class="text-[#1C160C] text-[48px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 md:text-[32px] lg:text-[22px] bg-[#FFFFFF]">Who We Are</h2>
+      <h2 id="home" class="text-[#1C160C] text-[48px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 md:text-[32px] lg:text-[22px] bg-[#FFFFFF]">Who We Are</h2>
       <div class="flex flex-col text-justify text-[38px] gap-10 px-4 pb-10 @container md:text-[22px] lg:text-[16px] bg-[#FFFFFF]">
         <p>
           Skavigo Logistics Pvt Ltd is a pioneering Indian logistics company specializing in comprehensive supply chain solutions. Backed by over a decade of experience through our sibling company, Rajita Clearing Agency Pvt Ltd, we deliver end-to-end logistics services, including customs clearance, freight forwarding, warehousing, and transportation.
@@ -154,6 +175,7 @@
 
       <!-- Section 2 -->
       <h2 
+        id="specialities"
         class="text-[#1C160C] text-[48px] font-bold leading-tight tracking-[-0.015em] px-4 pt-5 md:text-[32px] lg:text-[22px] bg-[#FFFFFF]" 
       >
         Our Specialities
@@ -216,7 +238,8 @@
       </div>
 
       <!-- Section J -->
-      <h2 
+      <h2
+        id="journey" 
         class="text-[#1C160C] text-[48px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 md:text-[32px] lg:text-[22px] bg-[#FFFFFF]" 
       >
         Our Journey
@@ -287,7 +310,7 @@
       </div>
 
       <!-- Section 6 -->
-      <div class="flex flex-col gap-4 px-4 pb-10 @container bg-[#FFFFFF]">
+      <div id="services" class="flex flex-col gap-4 px-4 pb-10 @container bg-[#FFFFFF]">
         <div class="flex flex-col gap-6">
           <div class="flex flex-col gap-4">
             <h2 class="text-[#1C160C] text-[48px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 md:text-[32px] lg:text-[22px]">
@@ -361,7 +384,7 @@
       </div>
 
       <!-- Clients -->
-      <section class="py-12 px-6 bg-[#FFFFFF]">
+      <section id="clients" class="py-12 px-6 bg-[#FFFFFF]">
         <h2 class="text-[#1C160C] text-[48px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 md:text-[32px] lg:text-[22px]">
           Our Trusted Clients
         </h2>
@@ -380,7 +403,8 @@
       </section>
 
       <!-- Section 3 -->
-      <h2 
+      <h2
+        id="mission" 
         class="text-[#1C160C] text-[48px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 md:text-[32px] lg:text-[22px] bg-[#FFFFFF]"
       >
         Our Mission
@@ -391,6 +415,7 @@
 
       <!-- Section 4 -->
       <h2 
+        id="vision"
         class="text-[#1C160C] text-[48px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 md:text-[32px] lg:text-[22px] bg-[#FFFFFF]"
       >
         Our Vision
@@ -401,6 +426,7 @@
 
       <!-- Section 5 -->
       <h2 
+        id="features"
         class="text-[#1C160C] text-[48px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 md:text-[32px] lg:text-[22px] bg-[#FFFFFF]"
       >
         Core Features
@@ -462,6 +488,7 @@
       <!-- Section 7 -->
       <div class="bg-[#FFFFFF]">  
         <h2 
+          id="industries"
           class="text-[#1C160C] text-[48px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 md:text-[32px] lg:text-[22px]"
         >
           Industries we serve
@@ -526,7 +553,7 @@
 
     </div>
   </body>
-  <footer class="bg-gray-900 text-white py-8"> 
+  <footer id="contact" class="bg-gray-900 text-white py-8"> 
     <div class="max-w-7xl m-auto px-4">
       <h1 class="text-[38px] md:text-[22px] lg:text-[16px] font-bold text-center mb-4"> SKAVIGO LOGISTICS PRIVATE LIMITED</h1>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 border-t border-gray-700">
@@ -575,5 +602,17 @@
   <script>
     // Dynamically update the year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // For Navbar
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    // Auto close when a link is clicked (on mobile)
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("show");
+      });
+    });
   </script>
 </html>
