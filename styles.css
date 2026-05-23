@@ -591,17 +591,6 @@ iframe.skiptranslate {
   overflow: visible !important;
 }
 
-@media (max-width: 1200px) {
-  .logo-tagline {
-    display: none !important;
-  }
-  
-  .navbar-links a {
-    padding: 0.5rem 0.6rem;
-    font-size: 0.85rem;
-  }
-}
-
 @media (max-width: 768px) {
   .logo-tagline {
     display: none !important;
