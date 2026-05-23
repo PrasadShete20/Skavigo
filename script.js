@@ -419,8 +419,10 @@ document.addEventListener('DOMContentLoaded', () => {
             paths.forEach(p => {
               const domainStr = d ? `; domain=${d}` : '';
               const pathStr = p ? `; path=${p}` : '';
+              // Try to delete it
               document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT${domainStr}${pathStr}`;
-              document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC${domainStr}${pathStr}`;
+              // Force overwrite it to English just in case deletion is blocked by the browser
+              document.cookie = `googtrans=/en/en${domainStr}${pathStr}`;
             });
           });
 
