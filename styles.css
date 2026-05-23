@@ -1828,7 +1828,7 @@ textarea.form-control {
     width: 280px;
     height: 100vh;
     height: 100dvh;
-    background: var(--color-white);
+    background: var(--color-surface);
     flex-direction: column;
     padding: 5rem 2rem 2rem;
     gap: 0.25rem;
