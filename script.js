@@ -342,6 +342,33 @@ document.addEventListener('DOMContentLoaded', () => {
     tryTranslate();
   }
 
+  // Helper: Read active language from cookie on page load
+  function initLanguageSelection() {
+    const match = document.cookie.match(/(^|;) ?googtrans=([^;]*)(;|$)/);
+    let currentLang = 'en'; // default
+    if (match && match[2]) {
+      const parts = match[2].split('/');
+      if (parts.length > 2) {
+        currentLang = parts[2];
+      }
+    }
+
+    // Update active class in dropdown based on cookie
+    if (langOptions.length > 0) {
+      langOptions.forEach(opt => opt.classList.remove('active'));
+      const activeOption = Array.from(langOptions).find(opt => opt.getAttribute('data-lang') === currentLang);
+      if (activeOption) {
+        activeOption.classList.add('active');
+      } else {
+        // Fallback to English if not found
+        const enOption = Array.from(langOptions).find(opt => opt.getAttribute('data-lang') === 'en');
+        if (enOption) enOption.classList.add('active');
+      }
+    }
+  }
+
+  initLanguageSelection();
+
   if (langToggle && langDropdown) {
     langToggle.addEventListener('click', (e) => {
       e.stopPropagation();
