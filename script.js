@@ -396,40 +396,48 @@ document.addEventListener('DOMContentLoaded', () => {
         langDropdown.classList.remove('open');
 
         if (lang === 'en') {
-          // Try native Google Translate reset first
-          const gtCombo = document.querySelector('.goog-te-combo');
-          if (gtCombo) {
-            gtCombo.value = ''; // Empty string restores original language
-            gtCombo.dispatchEvent(new Event('change'));
-          }
+          // 1. Clear Local and Session Storage where Google sometimes caches the lang
+          try {
+            window.localStorage.removeItem('googtrans');
+            window.localStorage.clear(); // Aggressive but safe for this site
+            window.sessionStorage.removeItem('googtrans');
+            window.sessionStorage.clear();
+          } catch(e) {}
 
-          // Forcefully clear googtrans cookies across all possible domain scopes
-          const domain = window.location.hostname;
-          const host = window.location.host;
-          const paths = ['/', window.location.pathname];
+          // 2. Clear cookies aggressively across all scopes
+          const domains = [
+            window.location.hostname,
+            '.' + window.location.hostname,
+            window.location.hostname.replace(/^www\./, ''),
+            '.' + window.location.hostname.replace(/^www\./, ''),
+            '' // no domain specified
+          ];
           
-          paths.forEach(p => {
-            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=${p};`;
-            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=${p}; domain=${domain};`;
-            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=${p}; domain=.${domain};`;
-            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=${p}; domain=${host};`;
-            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=${p}; domain=.${host};`;
+          const paths = ['/', window.location.pathname, ''];
+
+          domains.forEach(d => {
+            paths.forEach(p => {
+              const domainStr = d ? `; domain=${d}` : '';
+              const pathStr = p ? `; path=${p}` : '';
+              document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT${domainStr}${pathStr}`;
+              document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC${domainStr}${pathStr}`;
+            });
           });
 
-          // Also try to trigger the "Show Original" iframe button if it exists
-          const iframe = document.querySelector('iframe.goog-te-banner-frame');
-          if (iframe) {
-            try {
-              const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-              const restoreBtn = innerDoc.querySelector('.goog-te-button button');
-              if (restoreBtn) restoreBtn.click();
-            } catch(e) {}
-          }
+          // 3. Try to use the native combo box to reset
+          try {
+            const gtCombo = document.querySelector('.goog-te-combo');
+            if (gtCombo) {
+              gtCombo.value = '';
+              gtCombo.dispatchEvent(new Event('change'));
+            }
+          } catch(e) {}
 
-          // Reload to strip Google's CSS injections
+          // 4. Reload page without any hashes or search params that might trigger translation
           setTimeout(() => {
-            window.location.reload();
+            window.location.href = window.location.pathname;
           }, 300);
+          
           return;
         }
 
