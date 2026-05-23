@@ -396,10 +396,27 @@ document.addEventListener('DOMContentLoaded', () => {
         langDropdown.classList.remove('open');
 
         if (lang === 'en') {
-          // Reset to English — clear googtrans cookies and reload
+          // Reset to English — forcefully clear googtrans cookies across all possible domain scopes
+          const domain = window.location.hostname;
+          const host = window.location.host;
+          
           document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + window.location.hostname + ';';
-          window.location.reload();
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + domain + ';';
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + domain + ';';
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + host + ';';
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + host + ';';
+          
+          // Try to trigger the "Show Original" iframe button if it exists
+          const iframe = document.querySelector('iframe.goog-te-banner-frame');
+          if (iframe) {
+            const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const restoreBtn = innerDoc.querySelector('.goog-te-button button');
+            if (restoreBtn) restoreBtn.click();
+          }
+
+          setTimeout(() => {
+            window.location.reload();
+          }, 100);
           return;
         }
 
