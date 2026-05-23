@@ -1,616 +1,748 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Skavigo</title>
-    <link rel="icon" type="image/x-icon" href="./logo/skavigo_logo.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body class="p-5">
-    <div class="relative flex size-full min-h-screen flex-col bg-[#FFFFFF] group/design-root " style='font-family: Inter, "Noto Sans", sans-serif;'>
-      
-      <!-- Header -->
-      <div class="flex items-center bg-[#FFFFFF] p-4 pb-2 justify-center">
-        <div>
-          <img src="logo/Skavigo_logo.gif" alt="Skavigo"/>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skavigo — Logistics Solutions & Supply Chain Management</title>
+  <meta name="description"
+    content="Skavigo Logistics provides end-to-end supply chain solutions including customs clearance, freight forwarding, warehousing, and transportation services." />
+  <meta name="keywords"
+    content="Logistics, Supply Chain, Freight Forwarding, Customs Clearance, Warehousing, Transportation, Skavigo" />
+  <meta name="author" content="Skavigo Logistics Pvt Ltd" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://skavigo.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://skavigo.com/" />
+  <meta property="og:title" content="Skavigo — Logistics Solutions & Supply Chain Management" />
+  <meta property="og:description" content="End-to-end logistics and supply chain services tailored to your business." />
+  <meta property="og:image" content="./logo/Skavigo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./logo/skavigo_logo.ico" />
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Skavigo Logistics Pvt Ltd",
+    "url": "https://skavigo.com",
+    "logo": "https://skavigo.com/logo/Skavigo.png",
+    "description": "End-to-end logistics and supply chain solutions including customs clearance, freight forwarding, warehousing, and transportation.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Office No. F-01 A-39, 1st Floor, Upper Level, Haware Centurion, Plot NO 88 to 91, Sector-19A",
+      "addressLocality": "Navi Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400706",
+      "addressCountry": "IN"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-84240-12124",
+        "contactType": "customer service",
+        "email": "info@skavigo.com"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-84240-12125",
+        "contactType": "sales",
+        "email": "sales@skavigo.com"
+      }
+    ],
+    "sameAs": []
+  }
+  </script>
+</head>
+
+<body>
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <!-- ═══════════════════ PRELOADER ═══════════════════ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <img src="./logo/Skavigo_logo.gif" alt="Loading..." class="preloader-logo" />
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill"></div>
       </div>
-
-      <nav class="navbar">
-
-        <!-- Navbar Links -->
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home">Who We Are</a></li>
-          <li><a href="#specialities">Specialities</a></li>
-          <li><a href="#journey">Journey</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#clients">Clients</a></li>
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#vision">Vision</a></li>
-          <li><a href="#features">Core Features</a></li>
-          <li><a href="#industries">Industries We Serve</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <!-- Hamburger Icon -->
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>  
-      </nav>
-
-      <!-- Section 1a -->
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" style="overflow-x: initial;">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-    
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          
-          <div class="item active">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url(./images/Carousal1.1.jpg);'
-                >
-                  <div class="flex flex-col gap-2 text-center">
-                    <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                    >
-                      Logistics Solutions
-                    </h1>
-                    <h2 
-                      class="text-white text-2xl font-normal leading-normal @[480px]:text-3xl @[480px]:font-normal @[480px]:leading-normal"
-                    >
-                      We are committed to delivering your goods safely and on time.
-                    </h2>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#019863] text-[#FFFFFF] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                  >
-                    <span class="truncate" style="font-size: large;">Get a Quote</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="item">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url(./images/Carousal1.2.jpg);'
-                >
-                  <div class="flex flex-col gap-2 text-center">
-                    <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                    >
-                      We're building the future of freight
-                    </h1>
-                    <h2 
-                      class="text-white text-2xl font-normal leading-normal @[480px]:text-3xl @[480px]:font-normal @[480px]:leading-normal"
-                    >
-                      In 2017, Skavigo was founded with the mission to transform global logistics. 
-                      <br/>Our team is driven by the belief that technology can unlock new opportunities for
-                      businesses around the world.
-                    </h2>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#019863] text-[#FFFFFF] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                  >
-                    <span class="truncate"  style="font-size: large;">Learn More</span>
-                  </button>
-                </div>
-              </div>
-            </div>  
-          </div>
-        
-          <div class="item">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url(./images/carousal1.4.jpg);'
-                >
-                  <div class="flex flex-col gap-2 text-center">
-                    <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                    >
-                      Transform your supply chain
-                    </h1>
-                    <h2 
-                      class="text-white text-2xl font-normal leading-normal @[480px]:text-3xl @[480px]:font-normal @[480px]:leading-normal"
-                    >
-                      From warehousing to transportation, Skavigo has you covered.
-                    </h2>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#019863] text-[#FFFFFF] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                  >
-                    <span class="truncate"  style="font-size: large;">Get Started</span>
-                  </button>
-                </div>
-              </div>
-            </div> 
-          </div>
-    
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="background-image: none;">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next" style="background-image: none;">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Section 1b -->
-      <h2 id="home" class="text-[#1C160C] text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 @[480px]:text-5xl bg-[#FFFFFF]">Who We Are</h2>
-      <div class="flex flex-col text-justify text-2xl gap-10 px-4 pb-10 @container @[480px]:text-3xl bg-[#FFFFFF]">
-        <p>
-          Skavigo Logistics Pvt Ltd is a pioneering Indian logistics company specializing in comprehensive supply chain solutions. Backed by over a decade of experience through our sibling company, Rajita Clearing Agency Pvt Ltd, we deliver end-to-end logistics services, including customs clearance, freight forwarding, warehousing, and transportation.
-          At Skavigo, we pride ourselves on our customer-centric approach, cutting-edge technology, and commitment to excellence. Whether you are scaling globally or optimizing local operations, our expertise ensures your goods move safely, efficiently, and on time.          
-          We are more than a logistics provider; we are your trusted partner in building resilient supply chains and driving business growth.
-        </p>
-      </div>
-
-      <!-- Section 2 -->
-      <h2 
-        id="specialities"
-        class="text-[#1C160C] text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pt-5 @[480px]:text-5xl bg-[#FFFFFF]" 
-      >
-        Our Specialities
-      </h2>
-      <div class="flex flex-col gap-10 px-4 py-10 @container bg-[#FFFFFF]">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col">
-            <div class="text-[#1C160C]" data-icon="Timer" data-size="30px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"
-                ></path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="text-[#1C160C] text-3xl font-bold leading-tight @[480px]:text-4xl">Fast and reliable</h2>
-              <p class="text-[#A18249] font-normal leading-normal text-2xl @[480px]:text-3xl">Leverage our network to move goods faster</p>
-            </div>
-          </div>
-          <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col">
-            <div class="text-[#1C160C]" data-icon="Tag" data-size="30px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M243.31,136,144,36.69A15.86,15.86,0,0,0,132.69,32H40a8,8,0,0,0-8,8v92.69A15.86,15.86,0,0,0,36.69,144L136,243.31a16,16,0,0,0,22.63,0l84.68-84.68a16,16,0,0,0,0-22.63Zm-96,96L48,132.69V48h84.69L232,147.31ZM96,84A12,12,0,1,1,84,72,12,12,0,0,1,96,84Z"
-                ></path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="text-[#1C160C] text-3xl font-bold leading-tight  @[480px]:text-4xl">Transparent pricing</h2>
-              <p class="text-[#A18249] font-normal leading-normal text-2xl @[480px]:text-3xl">Our prices are transparent and affordable</p>
-            </div>
-          </div>
-          <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col">
-            <div class="text-[#1C160C]" data-icon="Recycle" data-size="30px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M96,208a8,8,0,0,1-8,8H40a24,24,0,0,1-20.77-36l34.29-59.25L39.47,124.5A8,8,0,1,1,35.33,109l32.77-8.77a8,8,0,0,1,9.8,5.66l8.79,32.77A8,8,0,0,1,81,148.5a8.37,8.37,0,0,1-2.08.27,8,8,0,0,1-7.72-5.93l-3.8-14.15L33.11,188A8,8,0,0,0,40,200H88A8,8,0,0,1,96,208Zm140.73-28-23.14-40a8,8,0,0,0-13.84,8l23.14,40A8,8,0,0,1,216,200H147.31l10.34-10.34a8,8,0,0,0-11.31-11.32l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.31-11.32L147.31,216H216a24,24,0,0,0,20.77-36ZM128,32a7.85,7.85,0,0,1,6.92,4l34.29,59.25-14.08-3.78A8,8,0,0,0,151,106.92l32.78,8.79a8.23,8.23,0,0,0,2.07.27,8,8,0,0,0,7.72-5.93l8.79-32.79a8,8,0,1,0-15.45-4.14l-3.8,14.17L148.77,28a24,24,0,0,0-41.54,0L84.07,68a8,8,0,0,0,13.85,8l23.16-40A7.85,7.85,0,0,1,128,32Z"
-                ></path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="text-[#1C160C] text-3xl font-bold leading-tight @[480px]:text-4xl">Sustainable</h2>
-              <p class="text-[#A18249] font-normal leading-normal text-2xl @[480px]:text-3xl">We are committed to reducing emissions</p>
-            </div>
-          </div>
-          <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col">
-            <div class="text-[#1C160C]" data-icon="Smiley" data-size="30px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM80,108a12,12,0,1,1,12,12A12,12,0,0,1,80,108Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,176,108Zm-1.07,48c-10.29,17.79-27.4,28-46.93,28s-36.63-10.2-46.92-28a8,8,0,1,1,13.84-8c7.47,12.91,19.21,20,33.08,20s25.61-7.1,33.07-20a8,8,0,0,1,13.86,8Z"
-                ></path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="text-[#1C160C] text-3xl font-bold leading-tight @[480px]:text-4xl">User-friendly</h2>
-              <p class="text-[#A18249] font-normal leading-normal text-2xl @[480px]:text-3xl">Our platform is intuitive and easy to use</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section J -->
-      <h2
-        id="journey" 
-        class="text-[#1C160C] text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 @[480px]:text-5xl bg-[#FFFFFF]" 
-      >
-        Our Journey
-      </h2>
-      <div class="grid grid-cols-[40px_1fr] gap-x-2 px-4 pb-10 bg-[#FFFFFF]">
-        <div class="flex flex-col items-center gap-1 pt-5">
-          <div class="size-2 rounded-full bg-[#1C160C]"></div>
-          <div class="w-[1.5px] bg-[#E9DFCE] h-4 grow"></div>
-        </div>
-        <div class="flex flex-1 flex-col py-3">
-          <p class="text-[#1C160C] text-3xl font-medium leading-normal @[480px]:text-4xl">Formation of Rajita Clearing Pvt Ltd (1990)</p>
-          <p class="text-[#A18249] text-2xl font-normal leading-normal @[480px]:text-3xl">
-            Established as a pioneer in customs clearance, transportation, and warehousing services.
-            Specialized in providing end-to-end logistics solutions for diverse industries.
-            Built a strong foundation of trust and long-term partnerships with clients.
-          </p>
-        </div>
-        <div class="flex flex-col items-center gap-1">
-          <div class="w-[1.5px] bg-[#E9DFCE] h-4"></div>
-          <div class="size-2 rounded-full bg-[#1C160C]"></div>
-          <div class="w-[1.5px] bg-[#E9DFCE] h-4 grow"></div>
-        </div>
-        <div class="flex flex-1 flex-col py-3">
-          <p class="text-[#1C160C] text-3xl font-medium leading-normal @[480px]:text-4xl">Expansion of Services (2000–2010)</p>
-          <p class="text-[#A18249] text-2xl font-normal leading-normal @[480px]:text-3xl">
-            Diversified operations to cater to sectors such as technology, manufacturing, agriculture, and FMCG.
-            Gained a reputation for reliability and excellence in logistics and supply chain management.            
-            Strengthened relationships with global logistics partners and agents.
-          </p>
-        </div>
-        <div class="flex flex-col items-center gap-1">
-          <div class="w-[1.5px] bg-[#E9DFCE] h-4"></div>
-          <div class="size-2 rounded-full bg-[#1C160C]"></div>
-          <div class="w-[1.5px] bg-[#E9DFCE] h-4 grow"></div>
-        </div>
-        <div class="flex flex-1 flex-col py-3">
-          <p class="text-[#1C160C] text-3xl font-medium leading-normal @[480px]:text-4xl">Strategic Partnerships (2010–2020)</p>
-          <p class="text-[#A18249] text-2xl font-normal leading-normal @[480px]:text-3xl">
-            Collaborated with forwarding agents to provide comprehensive logistics solutions.
-            Played a pivotal role in managing customs clearance, transportation, and warehousing for major industries.
-            Invested in technology and infrastructure to improve operational efficiency and client satisfaction.
-          </p>
-        </div>
-        <div class="flex flex-col items-center gap-1">
-          <div class="w-[1.5px] bg-[#E9DFCE] h-4"></div>
-          <div class="size-2 rounded-full bg-[#1C160C]"></div>
-          <div class="w-[1.5px] bg-[#E9DFCE] h-4 grow"></div>
-        </div>
-        <div class="flex flex-1 flex-col py-3">
-          <p class="text-[#1C160C] text-3xl font-medium leading-normal @[480px]:text-4xl">Formation of Skavigo Logistics Pvt Ltd (2024)</p>
-          <p class="text-[#A18249] text-2xl font-normal leading-normal @[480px]:text-3xl">
-            Launched as a sibling company to Rajita Clearing Pvt Ltd, leveraging over 30 years of industry expertise.
-            Designed to provide integrated forwarding, customs clearance, transportation, and warehousing services.
-            Established a seamless "one-roof solution" to enhance client experience and operational efficiency.
-          </p>
-        </div>
-        <div class="flex flex-col items-center gap-1 pb-3">
-          <div class="w-[1.5px] bg-[#E9DFCE] h-4"></div>
-          <div class="size-2 rounded-full bg-[#1C160C]"></div>
-        </div>
-        <div class="flex flex-1 flex-col py-3">
-          <p class="text-[#1C160C] text-3xl font-medium leading-normal @[480px]:text-4xl">Vision and Mission of Skavigo Logistics Pvt Ltd (2024 Onwards)</p>
-          <p class="text-[#A18249] text-2xl font-normal leading-normal @[480px]:text-3xl">
-            Aspire to lead the logistics and supply chain sector by offering cost-effective, efficient, and reliable solutions.
-            Actively exploring partnerships with global forwarder networks to expand services and reach.            
-            Committed to leveraging expertise to exceed client expectations and build enduring partnerships.</p>
-        </div>
-      </div>
-
-      <!-- Section 6 -->
-      <div id="services" class="flex flex-col gap-4 px-4 pb-10 @container bg-[#FFFFFF]">
-        <div class="flex flex-col gap-6">
-          <div class="flex flex-col gap-4">
-            <h2 class="text-[#1C160C] text-4xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 @[480px]:text-5xl">
-              Our Services
-            </h2>
-            <p class="text-[#1C160C] text-2xl font-normal leading-normal @[480px]:text-3xl">
-              We offer a wide range of services from air freight, ocean freight, warehousing to trucking.
-            </p>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <!-- Item 1 -->
-          <div class="relative flex flex-col gap-3 pb-3 group">
-            <div class="relative w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-              style='background-image: url(./images/card1Truck.jpg);'>
-              <div
-                class="absolute inset-0 flex items-center justify-center bg-black/60 text-white font-medium opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-xl p-4">
-                <p class="text-justify max-w-[720px] text-2xl @[480px]:text-3xl">
-                  Efficient trucking services for last-mile and long-haul transportation. Our fleet ensures timely, safe, and flexible delivery to keep your supply chain moving.
-                </p>
-              </div>
-            </div>
-            <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-medium leading-normal">Trucking</p>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="relative flex flex-col gap-3 pb-3 group">
-            <div class="relative w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-              style='background-image: url(./images/card2Airplane.jpg);'>
-              <div
-                class="absolute inset-0 flex items-center justify-center bg-black/60 text-white font-medium opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-xl p-4">
-                <p class="text-justify max-w-[720px] text-2xl @[480px]:text-3xl">
-                  Fast and efficient air freight solutions to meet your urgent delivery needs. From small parcels to large cargo, Skavigo ensures timely delivery with global coverage.
-                </p>
-              </div>
-            </div>
-            <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-medium leading-normal">Air Freight</p>
-          </div>
-
-          <!-- Item 3 -->
-          <div class="relative flex flex-col gap-3 pb-3 group">
-            <div class="relative w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-              style='background-image: url(./images/card3Ship.jpg);'>
-              <div
-                class="absolute inset-0 flex items-center justify-center bg-black/60 text-white font-medium opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-xl p-4">
-                <p class="text-justify max-w-[720px] text-2xl @[480px]:text-3xl">
-                  Cost-effective and reliable ocean freight services for international shipping. Whether it’s FCL, LCL, or specialized cargo, we handle it all with expertise.
-                </p>
-              </div>
-            </div>
-            <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-medium leading-normal">Ocean Freight</p>
-          </div>
-
-          <!-- Item 4 -->
-          <div class="relative flex flex-col gap-3 pb-3 group">
-            <div class="relative w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-              style='background-image: url(./images/Carousal3.3.jpg);'>
-              <div
-                class="absolute inset-0 flex items-center justify-center bg-black/60 text-white font-medium opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-xl p-4">
-                <p class="text-justify max-w-[720px] text-2xl @[480px]:text-3xl">
-                  Warehouses are located strategically to store, manage, and distribute your goods. Skavigo offers secure, scalable, and technology-driven warehousing solutions.
-                </p>
-              </div>
-            </div>
-            <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-medium leading-normal">Warehouse</p>
-          </div>
-        </div>
-        <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-normal leading-normal">
-          At Skavigo, we offer a comprehensive suite of logistics services designed to fit your business needs. Learn how our tailored solutions can drive efficiency and reliability for your business. <a href="#">Learn more</a>
-        </p>
-      </div>
-
-      <!-- Clients -->
-      <section id="clients" class="py-12 px-6 bg-[#FFFFFF]">
-        <h2 class="text-[#1C160C] text-4xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 @[480px]:text-5xl">
-          Our Trusted Clients
-        </h2>
-        <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 items-center">
-            <img src="./partner_logos/EmpireIndustries.jpg" alt="Empire Industries" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="./partner_logos/Glitorium_India.png" alt="Glitorium India" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="./partner_logos/hardcastle.png" alt="Hard Castle" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="./partner_logos/MahafeedFertlizers.png" alt="Mahafeed Fertlizers" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="./partner_logos/maruchem.jpg" alt="maruchem" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="./partner_logos/NutrisCropaSolutions.jpg" alt="Nutris Cropa Solutions" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="./partner_logos/OMEGA_COLORS.webp" alt="OMEGA COLORS" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="./partner_logos/RHI Magnesita.png" alt="RHI Magnesita" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="./partner_logos/SwitchingAVO.png" alt="Switching AVO" class="mx-auto grayscale hover:grayscale-0 transition">
-            <img src="./partner_logos/tongyucommuni.png" alt="tongyu communi" class="mx-auto grayscale hover:grayscale-0 transition">
-        </div>
-      </section>
-
-      <!-- Section 3 -->
-      <h2
-        id="mission" 
-        class="text-[#1C160C] text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 @[480px]:text-5xl bg-[#FFFFFF]"
-      >
-        Our Mission
-      </h2>
-      <p class="text-[#1C160C] text-justify text-2xl @[480px]:text-3xl font-normal leading-normal pb-3 pt-1 px-4 bg-[#FFFFFF]">
-        At Skavigo Logistics, our mission is to empower businesses with reliable, innovative, and efficient logistics solutions. We strive to simplify supply chain complexities, ensuring safe and timely delivery of goods while fostering long-term partnerships with our clients. Through excellence and sustainability, we aim to make logistics seamless for everyone.
-      </p>
-
-      <!-- Section 4 -->
-      <h2 
-        id="vision"
-        class="text-[#1C160C] text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 @[480px]:text-5xl bg-[#FFFFFF]"
-      >
-        Our Vision
-      </h2>
-      <p class="text-[#1C160C] text-justify text-2xl @[480px]:text-3xl font-normal leading-normal pb-3 pt-1 px-4 bg-[#FFFFFF]">
-        Our vision is to become a global leader in logistics and supply chain solutions, redefining industry standards with innovation, integrity, and excellence. We aspire to build a future where logistics fuels growth, connects businesses, and enhances the lives of communities worldwide.
-      </p>
-
-      <!-- Section 5 -->
-      <h2 
-        id="features"
-        class="text-[#1C160C] text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 @[480px]:text-5xl bg-[#FFFFFF]"
-      >
-        Core Features
-      </h2>
-      <div class="flex flex-col gap-10 px-4 py-10 @container bg-[#FFFFFF]">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col">
-            <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="30px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" viewBox="0 0 256 256">
-                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="text-[#1C160C] text-3xl @[480px]:text-4xl font-bold leading-tight">Inventory Management</h2>
-              <p class="text-[#A18249] text-justify text-2xl @[480px]:text-3xl font-normal leading-normal">Optimize your inventory with Skavigo’s advanced solutions. We ensure real-time inventory tracking, forecasting, and seamless integration with your supply chain to minimize costs and maximize efficiency.</p>
-            </div>
-          </div>
-          <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col">
-            <div class="text-[#1C160C]" data-icon="Truck" data-size="30px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M247.42,117l-14-35A15.93,15.93,0,0,0,218.58,72H184V64a8,8,0,0,0-8-8H24A16,16,0,0,0,8,72V184a16,16,0,0,0,16,16H41a32,32,0,0,0,62,0h50a32,32,0,0,0,62,0h17a16,16,0,0,0,16-16V120A7.94,7.94,0,0,0,247.42,117ZM184,88h34.58l9.6,24H184ZM24,72H168v64H24ZM72,208a16,16,0,1,1,16-16A16,16,0,0,1,72,208Zm81-24H103a32,32,0,0,0-62,0H24V152H168v12.31A32.11,32.11,0,0,0,153,184Zm31,24a16,16,0,1,1,16-16A16,16,0,0,1,184,208Zm48-24H215a32.06,32.06,0,0,0-31-24V128h48Z"
-                ></path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="text-[#1C160C] text-3xl @[480px]:text-4xl font-bold leading-tight">Order Fulfillment</h2>
-              <p class="text-[#A18249] text-justify text-2xl @[480px]:text-3xl font-normal leading-normal">Manage your orders effortlessly. From picking to packing to delivery, our streamlined processes ensure your customers receive their products on time, every time.</p>
-            </div>
-          </div>
-          <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col">
-            <div class="text-[#1C160C]" data-icon="Truck" data-size="30px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M247.42,117l-14-35A15.93,15.93,0,0,0,218.58,72H184V64a8,8,0,0,0-8-8H24A16,16,0,0,0,8,72V184a16,16,0,0,0,16,16H41a32,32,0,0,0,62,0h50a32,32,0,0,0,62,0h17a16,16,0,0,0,16-16V120A7.94,7.94,0,0,0,247.42,117ZM184,88h34.58l9.6,24H184ZM24,72H168v64H24ZM72,208a16,16,0,1,1,16-16A16,16,0,0,1,72,208Zm81-24H103a32,32,0,0,0-62,0H24V152H168v12.31A32.11,32.11,0,0,0,153,184Zm31,24a16,16,0,1,1,16-16A16,16,0,0,1,184,208Zm48-24H215a32.06,32.06,0,0,0-31-24V128h48Z"
-                ></path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="text-[#1C160C] text-3xl @[480px]:text-4xl font-bold leading-tight">Shipping</h2>
-              <p class="text-[#A18249] text-justify text-2xl @[480px]:text-3xl font-normal leading-normal">Ship efficiently with Skavigo. Leverage our vast logistics network for timely, cost-effective, and reliable shipping solutions tailored to your needs.</p>
-            </div>
-          </div>
-          <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col">
-            <div class="text-[#1C160C]" data-icon="GlobeHemisphereWest" data-size="30px" data-weight="regular">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm88,104a87.62,87.62,0,0,1-6.4,32.94l-44.7-27.49a15.92,15.92,0,0,0-6.24-2.23l-22.82-3.08a16.11,16.11,0,0,0-16,7.86h-8.72l-3.8-7.86a15.91,15.91,0,0,0-11-8.67l-8-1.73L96.14,104h16.71a16.06,16.06,0,0,0,7.73-2l12.25-6.76a16.62,16.62,0,0,0,3-2.14l26.91-24.34A15.93,15.93,0,0,0,166,49.1l-.36-.65A88.11,88.11,0,0,1,216,128ZM143.31,41.34,152,56.9,125.09,81.24,112.85,88H96.14a16,16,0,0,0-13.88,8l-8.73,15.23L63.38,84.19,74.32,58.32a87.87,87.87,0,0,1,69-17ZM40,128a87.53,87.53,0,0,1,8.54-37.8l11.34,30.27a16,16,0,0,0,11.62,10l21.43,4.61L96.74,143a16.09,16.09,0,0,0,14.4,9h1.48l-7.23,16.23a16,16,0,0,0,2.86,17.37l.14.14L128,205.94l-1.94,10A88.11,88.11,0,0,1,40,128Zm102.58,86.78,1.13-5.81a16.09,16.09,0,0,0-4-13.9,1.85,1.85,0,0,1-.14-.14L120,174.74,133.7,144l22.82,3.08,45.72,28.12A88.18,88.18,0,0,1,142.58,214.78Z"
-                ></path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="text-[#1C160C] text-3xl @[480px]:text-4xl font-bold leading-tight">Global Expansion</h2>
-              <p class="text-[#A18249] text-justify text-2xl @[480px]:text-3xl font-normal leading-normal">Scale internationally with confidence. Skavigo provides end-to-end logistics support to help you expand your reach and navigate the complexities of global trade.</p>
-            </div>
-          </div>
-      </div>
-
-      <!-- Section 7 -->
-      <div class="bg-[#FFFFFF]">  
-        <h2 
-          id="industries"
-          class="text-[#1C160C] text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 @[480px]:text-5xl"
-        >
-          Industries we serve
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          <div class="flex flex-col gap-3 text-center pb-3">
-            <div class="px-4">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                style='background-image: url(./images/CircleEcommerce.jpg);'
-              ></div>
-            </div>
-            <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-medium leading-normal">E-commerce</p>
-          </div>
-          <div class="flex flex-col gap-3 text-center pb-3">
-            <div class="px-4">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                style='background-image: url(./images/CircleHealth.jpg);'
-              ></div>
-            </div>
-            <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-medium leading-normal">Health and Wellness</p>
-          </div>
-          <div class="flex flex-col gap-3 text-center pb-3">
-            <div class="px-4">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                style='background-image: url(./images/CircleFoodBreverages.jpg);'
-              ></div>
-            </div>
-            <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-medium leading-normal">Food and Beverage</p>
-          </div>
-          <div class="flex flex-col gap-3 text-center pb-3">
-            <div class="px-4">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                style='background-image: url(./images/CircleTechnology.jpg);'
-              ></div>
-            </div>
-            <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-medium leading-normal">Technology</p>
-          </div>
-          <div class="flex flex-col gap-3 text-center pb-3">
-            <div class="px-4">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                style='background-image: url(./images/CircleFertilizer.jpg);'
-              ></div>
-            </div>
-            <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-medium leading-normal">Fertilizers</p>
-          </div>
-          <div class="flex flex-col gap-3 text-center pb-3">
-            <div class="px-4">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                style='background-image: url(./images/CircleAgriculture.jpg);'
-              ></div>
-            </div>
-            <p class="text-[#1C160C] text-2xl @[480px]:text-3xl font-medium leading-normal">Agriculture</p>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </body>
-  <footer id="contact" class="bg-gray-900 text-white py-8"> 
-    <div class="max-w-7xl m-auto px-4">
-      <h1 class="text-2xl @[480px]:text-3xl font-bold text-center mb-4"> SKAVIGO LOGISTICS PRIVATE LIMITED</h1>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 border-t border-gray-700">
+  </div>
 
-        <div>
-          <h2 class="text-2xl @[480px]:text-3xl font-bold">Mail Id:</h2>
-          <p class="text-gray-400 mt-2 text-xl @[480px]:text-2xl">
-            <a href="mailto:info@skavigo.com">info@skavigo.com</a>
-            <br/><a href="mailto:prasad.shete@skavigo.com">prasad.shete@skavigo.com</a>
-            <br/><a href="mailto:import@skavigo.com">import@skavigo.com</a>
-          </p>
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-logo">
+        <img src="./logo/skavigo_withoutbg_logo.png" alt="Skavigo Logistics" />
+        <span class="logo-tagline">Bridging Distance.<br>Building Trust.</span>
+      </a>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="#home">About</a>
+        <a href="#specialities">Specialities</a>
+        <a href="#journey">Journey</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#features">Features</a>
+        <a href="#industries">Industries</a>
+        <a href="tel:+918424012124" class="navbar-cta magnetic">Contact Us</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.25rem;">
+        <div class="lang-selector" id="langSelector">
+          <button class="lang-toggle" id="langToggle" aria-label="Change Language">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+              <path d="M2 12h20" />
+            </svg>
+          </button>
+          <div class="lang-notification" id="langNotification">Change Language</div>
+          <div class="lang-dropdown" id="langDropdown">
+            <div class="lang-dropdown-header">Select Language</div>
+            <button class="lang-option active" data-lang="en"><span class="lang-flag">🇬🇧</span> English</button>
+            <button class="lang-option" data-lang="hi"><span class="lang-flag">🇮🇳</span> Hindi</button>
+            <button class="lang-option" data-lang="mr"><span class="lang-flag">🇮🇳</span> Marathi</button>
+            <button class="lang-option" data-lang="gu"><span class="lang-flag">🇮🇳</span> Gujarati</button>
+            <button class="lang-option" data-lang="ar"><span class="lang-flag">🇸🇦</span> Arabic</button>
+            <button class="lang-option" data-lang="fr"><span class="lang-flag">🇫🇷</span> French</button>
+            <button class="lang-option" data-lang="es"><span class="lang-flag">🇪🇸</span> Spanish</button>
+            <button class="lang-option" data-lang="de"><span class="lang-flag">🇩🇪</span> German</button>
+            <button class="lang-option" data-lang="zh-CN"><span class="lang-flag">🇨🇳</span> Chinese</button>
+          </div>
         </div>
+        <!-- Hidden Google Translate Engine -->
+        <div id="google_translate_element"
+          style="position:absolute;opacity:0;pointer-events:none;height:0;overflow:hidden;"></div>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            style="display:none;">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
 
-        <div>
-          <h2 class="text-2xl @[480px]:text-3xl font-bold">Sales Director:</h2>
-          <p class="text-gray-400 mt-2 text-xl @[480px]:text-2xl">
-            Mail ID:<br/><a href="mailto:sales@skavigo.com">sales@skavigo.com</a>
-            <br/><br/>Contact number: <br/>+91 84240 12125
-          </p>
-        </div>
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image: url('./images/Carousal1.1.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('./images/Carousal1.2.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('./images/carousal1.4.jpg');"></div>
+    </div>
 
-        <div>
-          <h2 class="text-2xl @[480px]:text-3xl font-bold">Address</h2>
-          <p class="text-gray-400 mt-2 text-xl @[480px]:text-2xl">
-            Office No. F-01 A-39, 1st Floor, Upper Level, 
-            <br/>Haware Centurion, Plot NO 88 to 91, Sector-19A, 
-            <br/>Near Seawoods Railway Station, 
-            <br/>Nerul (East), Navi Mumbai 400706, 
-            <br/>Maharashtra, India
-          </p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl @[480px]:text-3xl font-bold">Phone Number</h2>
-          <p class="text-gray-400 mt-2 text-xl @[480px]:text-2xl">+91 84240 12124</p>
-        </div>
-        
+    <div class="hero-content">
+      <div class="hero-text active">
+        <h1>Logistics Solutions, Delivered.</h1>
+        <p>We are committed to delivering your goods safely, efficiently, and on time — every time.</p>
+      </div>
+      <div class="hero-text">
+        <h1>Building the Future of Freight</h1>
+        <p>We combine innovation and expertise to redefine freight logistics with efficiency, cost-effectiveness, and
+          transparency.</p>
+      </div>
+      <div class="hero-text">
+        <h1>Transform Your Supply Chain</h1>
+        <p>From warehousing to transportation, Skavigo has you covered with end-to-end solutions.</p>
       </div>
 
-      <!-- Bottom Section -->
-      <div class="border-t border-gray-700 mt-6 pt-4 text-center text-gray-500 text-xl @[480px]:text-2xl">
-        &copy; <span id="year"></span> SKAVIGO LOGISTICS PRIVATE LIMITED All rights reserved.
+      <form class="hero-tracking-form" id="heroTrackingForm">
+        <div class="tracking-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tracking-icon">
+            <path d="M2 12h10" />
+            <path d="M9 4v16" />
+            <path d="m3 9-3 3 3 3" />
+            <path d="M14 8h3l4 4v5h-7Z" />
+            <circle cx="16" cy="17" r="2" />
+            <circle cx="8" cy="17" r="2" />
+          </svg>
+          <input type="text" placeholder="Enter AWB or Container Number..." required />
+          <button type="submit" class="btn btn-primary magnetic">Track</button>
+        </div>
+        <div class="tracking-msg" id="trackingMsg">Advanced Tracking Portal Coming Soon!</div>
+      </form>
+
+      <div class="btn-group">
+        <a href="mailto:info@skavigo.com" class="btn btn-outline magnetic"
+          style="color: white; border-color: rgba(255,255,255,0.3);">Get a Quote</a>
+        <a href="#home" class="btn btn-outline magnetic">Learn More</a>
+      </div>
+
+      <div class="hero-indicators">
+        <button class="hero-indicator active" aria-label="Slide 1"></button>
+        <button class="hero-indicator" aria-label="Slide 2"></button>
+        <button class="hero-indicator" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ WHO WE ARE ═══════════════════ -->
+  <section class="section" id="home">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-title">Your Trusted Partner in Global Logistics</h2>
+      </div>
+      <div class="about-content reveal">
+        <p>
+          Skavigo Logistics Pvt Ltd is a pioneering Indian logistics company specializing in comprehensive supply chain
+          solutions. Backed by over a decade of experience through our sibling company, Rajita Clearing Agency Pvt Ltd,
+          we deliver end-to-end logistics services, including customs clearance, freight forwarding, warehousing, and
+          transportation.
+        </p>
+        <br />
+        <p>
+          At Skavigo, we pride ourselves on our customer-centric approach, cutting-edge technology, and commitment to
+          excellence. Whether you are scaling globally or optimizing local operations, our expertise ensures your goods
+          move safely, efficiently, and on time. We are more than a logistics provider — we are your trusted partner in
+          building resilient supply chains and driving business growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ STATS ═══════════════════ -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid reveal">
+        <div class="stat-item">
+          <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+          <p>Years of Experience</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+          <p>Industries Served</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="10000">0</span><span class="stat-suffix">+</span>
+          <p>Shipments Delivered</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SPECIALITIES ═══════════════════ -->
+  <section class="section alt-bg" id="specialities">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">Our Specialities</h2>
+        <p class="section-subtitle">What sets Skavigo apart in the world of logistics and supply chain management.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+              <path
+                d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z" />
+            </svg>
+          </div>
+          <h3>Fast & Reliable</h3>
+          <p>Leverage our extensive global network to move goods faster and with unmatched dependability.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+              <path
+                d="M243.31,136,144,36.69A15.86,15.86,0,0,0,132.69,32H40a8,8,0,0,0-8,8v92.69A15.86,15.86,0,0,0,36.69,144L136,243.31a16,16,0,0,0,22.63,0l84.68-84.68a16,16,0,0,0,0-22.63Zm-96,96L48,132.69V48h84.69L232,147.31ZM96,84A12,12,0,1,1,84,72,12,12,0,0,1,96,84Z" />
+            </svg>
+          </div>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden fees. Our pricing is straightforward, competitive, and designed to maximize your value.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+              <path
+                d="M96,208a8,8,0,0,1-8,8H40a24,24,0,0,1-20.77-36l34.29-59.25L39.47,124.5A8,8,0,1,1,35.33,109l32.77-8.77a8,8,0,0,1,9.8,5.66l8.79,32.77A8,8,0,0,1,81,148.5a8.37,8.37,0,0,1-2.08.27,8,8,0,0,1-7.72-5.93l-3.8-14.15L33.11,188A8,8,0,0,0,40,200H88A8,8,0,0,1,96,208Zm140.73-28-23.14-40a8,8,0,0,0-13.84,8l23.14,40A8,8,0,0,1,216,200H147.31l10.34-10.34a8,8,0,0,0-11.31-11.32l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.31-11.32L147.31,216H216a24,24,0,0,0,20.77-36ZM128,32a7.85,7.85,0,0,1,6.92,4l34.29,59.25-14.08-3.78A8,8,0,0,0,151,106.92l32.78,8.79a8.23,8.23,0,0,0,2.07.27,8,8,0,0,0,7.72-5.93l8.79-32.79a8,8,0,1,0-15.45-4.14l-3.8,14.17L148.77,28a24,24,0,0,0-41.54,0L84.07,68a8,8,0,0,0,13.85,8l23.16-40A7.85,7.85,0,0,1,128,32Z" />
+            </svg>
+          </div>
+          <h3>Sustainable</h3>
+          <p>We are committed to eco-friendly practices and actively reducing our carbon footprint across all
+            operations.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+              <path
+                d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM80,108a12,12,0,1,1,12,12A12,12,0,0,1,80,108Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,176,108Zm-1.07,48c-10.29,17.79-27.4,28-46.93,28s-36.63-10.2-46.92-28a8,8,0,1,1,13.84-8c7.47,12.91,19.21,20,33.08,20s25.61-7.1,33.07-20a8,8,0,0,1,13.86,8Z" />
+            </svg>
+          </div>
+          <h3>User-Friendly</h3>
+          <p>Our intuitive technology platform gives you full control and visibility over your logistics operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ JOURNEY ═══════════════════ -->
+  <section class="section" id="journey">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Our Journey</h2>
+        <p class="section-subtitle">From humble beginnings to a comprehensive logistics powerhouse.</p>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Formation of Rajita Clearing Pvt Ltd (1990)</h3>
+          <p>Established as a pioneer in customs clearance, transportation, and warehousing services. Built a strong
+            foundation of trust and long-term partnerships with clients across diverse industries.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Expansion of Services (2000–2010)</h3>
+          <p>Diversified operations to cater to technology, manufacturing, agriculture, and FMCG sectors. Gained a
+            reputation for reliability and excellence in supply chain management.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Strategic Partnerships (2010–2020)</h3>
+          <p>Collaborated with global forwarding agents to provide comprehensive logistics solutions. Invested in
+            technology and infrastructure to improve operational efficiency.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Formation of Skavigo Logistics (2024)</h3>
+          <p>Launched as a sibling company to Rajita Clearing Pvt Ltd, leveraging over 30 years of expertise.
+            Established a seamless "one-roof solution" for integrated logistics services.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Vision Forward (2024 Onwards)</h3>
+          <p>Aspiring to lead the logistics sector with cost-effective, efficient, and reliable solutions. Actively
+            exploring partnerships with global forwarder networks to expand reach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SERVICES ═══════════════════ -->
+  <section class="section alt-bg" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">From air freight to warehousing, we offer a comprehensive suite of logistics
+          services designed to fit your business needs.</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card reveal">
+          <div class="service-card-img">
+            <img src="./images/card1Truck.jpg" alt="Trucking Services" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <h3>Trucking</h3>
+            <p>Efficient trucking services for last-mile and long-haul transportation. Our fleet ensures timely, safe,
+              and flexible delivery.</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card-img">
+            <img src="./images/card2Airplane.jpg" alt="Air Freight" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <h3>Air Freight</h3>
+            <p>Fast and efficient air freight solutions to meet your urgent delivery needs. From small parcels to large
+              cargo with global coverage.</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card-img">
+            <img src="./images/card3Ship.jpg" alt="Ocean Freight" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <h3>Ocean Freight</h3>
+            <p>Cost-effective ocean freight for international shipping. Whether it's FCL, LCL, or specialized cargo, we
+              handle it all.</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card-img">
+            <img src="./images/Carousal3.3.jpg" alt="Warehousing" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <h3>Warehousing</h3>
+            <p>Strategically located warehouses to store, manage, and distribute your goods. Secure, scalable, and
+              technology-driven.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CLIENTS ═══════════════════ -->
+  <section class="section" id="clients">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Partners</span>
+        <h2 class="section-title">Our Trusted Clients</h2>
+      </div>
+      <div class="clients-marquee reveal">
+        <div class="clients-track">
+          <!-- Set 1 -->
+          <img src="./partner_logos/EmpireIndustries.jpg" alt="Empire Industries" loading="lazy" />
+          <img src="./partner_logos/Glitorium_India.png" alt="Glitorium India" loading="lazy" />
+          <img src="./partner_logos/hardcastle.png" alt="Hard Castle" loading="lazy" />
+          <img src="./partner_logos/MahafeedFertlizers.png" alt="Mahafeed Fertilizers" loading="lazy" />
+          <img src="./partner_logos/maruchem.jpg" alt="Maruchem" loading="lazy" />
+          <img src="./partner_logos/NutrisCropaSolutions.jpg" alt="Nutris Cropa Solutions" loading="lazy" />
+          <img src="./partner_logos/OMEGA_COLORS.webp" alt="Omega Colors" loading="lazy" />
+          <img src="./partner_logos/RHI Magnesita.png" alt="RHI Magnesita" loading="lazy" />
+          <img src="./partner_logos/SwitchingAVO.png" alt="Switching AVO" loading="lazy" />
+          <img src="./partner_logos/tongyucommuni.png" alt="Tongyu Communications" loading="lazy" />
+
+          <!-- Set 2 (Duplicated for seamless infinite scroll) -->
+          <img src="./partner_logos/EmpireIndustries.jpg" alt="Empire Industries" loading="lazy" />
+          <img src="./partner_logos/Glitorium_India.png" alt="Glitorium India" loading="lazy" />
+          <img src="./partner_logos/hardcastle.png" alt="Hard Castle" loading="lazy" />
+          <img src="./partner_logos/MahafeedFertlizers.png" alt="Mahafeed Fertilizers" loading="lazy" />
+          <img src="./partner_logos/maruchem.jpg" alt="Maruchem" loading="lazy" />
+          <img src="./partner_logos/NutrisCropaSolutions.jpg" alt="Nutris Cropa Solutions" loading="lazy" />
+          <img src="./partner_logos/OMEGA_COLORS.webp" alt="Omega Colors" loading="lazy" />
+          <img src="./partner_logos/RHI Magnesita.png" alt="RHI Magnesita" loading="lazy" />
+          <img src="./partner_logos/SwitchingAVO.png" alt="Switching AVO" loading="lazy" />
+          <img src="./partner_logos/tongyucommuni.png" alt="Tongyu Communications" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ MISSION & VISION ═══════════════════ -->
+  <section class="section alt-bg" id="mission">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Purpose</span>
+        <h2 class="section-title">Mission & Vision</h2>
+      </div>
+      <div class="mv-grid reveal">
+        <div class="mv-card">
+          <h3>
+            <span class="icon-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m16 12-4-4-4 4" />
+                <path d="M12 16V8" />
+              </svg>
+            </span>
+            Our Mission
+          </h3>
+          <p>At Skavigo Logistics, our mission is to empower businesses with reliable, innovative, and efficient
+            logistics solutions. We strive to simplify supply chain complexities, ensuring safe and timely delivery of
+            goods while fostering long-term partnerships with our clients. Through excellence and sustainability, we aim
+            to make logistics seamless for everyone.</p>
+        </div>
+        <div class="mv-card">
+          <h3>
+            <span class="icon-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </span>
+            Our Vision
+          </h3>
+          <p>Our vision is to become a global leader in logistics and supply chain solutions, redefining industry
+            standards with innovation, integrity, and excellence. We aspire to build a future where logistics fuels
+            growth, connects businesses, and enhances the lives of communities worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CORE FEATURES ═══════════════════ -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Capabilities</span>
+        <h2 class="section-title">Core Features</h2>
+        <p class="section-subtitle">Advanced logistics capabilities built to scale with your business.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m7.5 4.27 9 5.15" />
+              <path
+                d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+              <path d="m3.3 7 8.7 5 8.7-5" />
+              <path d="M12 22V12" />
+            </svg>
+          </div>
+          <h3>Inventory Management</h3>
+          <p>Real-time inventory tracking, forecasting, and seamless supply chain integration to minimize costs and
+            maximize efficiency.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="16" height="13" x="6" y="4" rx="2" />
+              <path d="m2 7 4-3" />
+              <path d="m22 7-4-3" />
+              <path d="M10 4v4" />
+              <path d="M14 4v4" />
+            </svg>
+          </div>
+          <h3>Order Fulfillment</h3>
+          <p>From picking to packing to delivery, our streamlined processes ensure your customers receive their products
+            on time, every time.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11" />
+              <path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2" />
+              <circle cx="7" cy="18" r="2" />
+              <path d="M15 18H9" />
+              <circle cx="17" cy="18" r="2" />
+            </svg>
+          </div>
+          <h3>Shipping</h3>
+          <p>Leverage our vast logistics network for timely, cost-effective, and reliable shipping solutions tailored to
+            your specific needs.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+              <path d="M2 12h20" />
+            </svg>
+          </div>
+          <h3>Global Expansion</h3>
+          <p>Scale internationally with confidence. End-to-end logistics support to navigate the complexities of global
+            trade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ INDUSTRIES ═══════════════════ -->
+  <section class="section alt-bg" id="industries">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Sectors</span>
+        <h2 class="section-title">Industries We Serve</h2>
+        <p class="section-subtitle">We deliver specialized logistics solutions across diverse industries.</p>
+      </div>
+      <div class="industries-grid reveal">
+        <div class="industry-item">
+          <div class="industry-img"><img src="./images/CircleEcommerce.jpg" alt="E-commerce" loading="lazy" /></div>
+          <p>E-commerce</p>
+        </div>
+        <div class="industry-item">
+          <div class="industry-img"><img src="./images/CircleHealth.jpg" alt="Health & Wellness" loading="lazy" /></div>
+          <p>Health & Wellness</p>
+        </div>
+        <div class="industry-item">
+          <div class="industry-img"><img src="./images/CircleFoodBreverages.jpg" alt="Food & Beverage" loading="lazy" />
+          </div>
+          <p>Food & Beverage</p>
+        </div>
+        <div class="industry-item">
+          <div class="industry-img"><img src="./images/CircleTechnology.jpg" alt="Technology" loading="lazy" /></div>
+          <p>Technology</p>
+        </div>
+        <div class="industry-item">
+          <div class="industry-img"><img src="./images/CircleFertilizer.jpg" alt="Fertilizers" loading="lazy" /></div>
+          <p>Fertilizers</p>
+        </div>
+        <div class="industry-item">
+          <div class="industry-img"><img src="./images/CircleAgriculture.jpg" alt="Agriculture" loading="lazy" /></div>
+          <p>Agriculture</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FAQ ═══════════════════ -->
+  <section class="section alt-bg" id="faq">
+    <div class="container reveal">
+      <div class="section-header">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Get quick answers to the most common questions about our logistics and supply chain services.</p>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">What regions do you provide services in?</button>
+          <div class="faq-answer">
+            <p>We provide end-to-end logistics solutions across India and offer international freight forwarding to major global ports. Our network ensures seamless delivery whether domestic or international.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do you handle customs clearance?</button>
+          <div class="faq-answer">
+            <p>Yes, we offer comprehensive customs clearance services. Our experts handle all documentation and compliance, ensuring your cargo moves across borders without delays.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How is freight pricing determined?</button>
+          <div class="faq-answer">
+            <p>Freight pricing is based on various factors including weight, volume, distance, transport mode (air, sea, road), and urgency. Contact us for a precise, customized quote for your specific needs.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do you offer temperature-controlled warehousing?</button>
+          <div class="faq-answer">
+            <p>Yes, we have specialized warehousing facilities equipped with temperature control suitable for perishables, pharmaceuticals, and other sensitive goods.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How can I track my shipment?</button>
+          <div class="faq-answer">
+            <p>You can use the tracking tool on our homepage by entering your AWB or container number. For detailed reports, our customer service team is always available to provide real-time updates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CTA ═══════════════════ -->
+  <section class="cta-section">
+    <canvas id="nodeNetwork"></canvas>
+    <div class="container reveal">
+      <div class="contact-grid">
+        <div class="contact-text">
+          <h2>Ready to Optimize Your Supply Chain?</h2>
+          <p>Partner with Skavigo Logistics and experience end-to-end logistics solutions built for your success. Send
+            us a message and our team will get back to you immediately.</p>
+          <div style="margin-top: 2rem;">
+            <a href="mailto:info@skavigo.com" class="btn btn-outline magnetic"
+              style="color: white; border-color: rgba(255,255,255,0.3);">Email Us Directly</a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <!-- Note for user: Replace the action URL with your Formspree Endpoint -->
+          <form class="contact-form" id="skavigoContactForm" action="https://formspree.io/f/xykoywwo" method="POST">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="john@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">How can we help you?</label>
+              <textarea id="message" name="message" class="form-control"
+                placeholder="I need a quote for freight forwarding..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary magnetic" id="submitBtn">Send Message</button>
+            <p id="formStatus"
+              style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #a8edce; text-align: center;"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Email</h4>
+          <a href="mailto:info@skavigo.com">info@skavigo.com</a>
+          <a href="mailto:prasad.shete@skavigo.com">prasad.shete@skavigo.com</a>
+          <a href="mailto:import@skavigo.com">import@skavigo.com</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sales Director</h4>
+          <a href="mailto:sales@skavigo.com">sales@skavigo.com</a>
+          <p>+91 84240 12125</p>
+        </div>
+        <div class="footer-col">
+          <h4>Address</h4>
+          <p>Office No. F-01 A-39, 1st Floor, Upper Level, Haware Centurion, Plot NO 88 to 91, Sector-19A, Near Seawoods
+            Railway Station, Nerul (East), Navi Mumbai 400706, Maharashtra, India</p>
+        </div>
+        <div class="footer-col">
+          <h4>Phone</h4>
+          <p>+91 84240 12124</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="year"></span> Skavigo Logistics Private Limited. All rights reserved.
       </div>
     </div>
   </footer>
-  <script>
-    // Dynamically update the year
-    document.getElementById("year").textContent = new Date().getFullYear();
 
-    // For Navbar
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6" />
+    </svg>
+  </button>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/918424012124" class="whatsapp-float popup-anim" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+    </svg>
+  </a>
+
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,mr,gu,ar,fr,es,de,zh-CN',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+        autoDisplay: false
+      }, 'google_translate_element');
     }
-
-    // Auto close when a link is clicked (on mobile)
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("navLinks").classList.remove("show");
-      });
-    });
   </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Script -->
+  <script src="./script.js" defer></script>
+</body>
+
 </html>
